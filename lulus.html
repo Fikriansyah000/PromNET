@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hasil Kelulusan SNBP</title>
+    <link rel="stylesheet" href="style_lulus.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">SELAMAT! ANDA DINYATAKAN LULUS SELEKSI SNBP 2025</h1>
+
+      <div class="content">
+        <div class="left-section">
+          <p class="nisn" id="nisn">NISN: 239214921 </p>
+          <p class="noReg" id="noReg">NOREG: 4579329732</p>
+          <p class="nama" id="nama"></p>
+          <p class="program-studi" id="jurusan"> S1 COMPUTER SCIENCE</p>
+          <p class="universitas" id="universitas">UNIVERSITAS PENDIDIKAN INDONESIA</p>
+          <p class = "ratarata" id ="Avarage" > SKOR :</p>
+          <div class="details">
+            <p><strong>Tanggal Lahir:</strong> 19/03/2005</p>
+            <p><strong>Kabupaten/Kota:</strong> Kab. Purwakarta</p>
+            <p><strong>Asal Sekolah:</strong> SMAN 1 PURWAKARTA</p>
+            <p><strong>Provinsi:</strong> Prov. Jawa Barat</p>
+          </div>
+        </div>
+        <div class="right-section">
+          <div class="qr-code">
+            <img src="Lulus.jpg" alt="QR Code" />
+          </div>
+          <div class="registrasi">
+            <p>Silakan lakukan pendaftaran ulang:</p>
+            <a href="https://youtu.be/H54KahuviSo?si=PCTGVpdLjRftUVV3"
+              >ISI LINK</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="fireworks-container"></div>
+      <!-- Kontainer Kembang Api -->
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Ambil parameter dari URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const average = urlParams.get("average"); // Ambil nilai dari query string
+        document.getElementById('Avarage').innerHTML += ` ${average}`;
+      });
+    </script>
+  </body>
+</html>

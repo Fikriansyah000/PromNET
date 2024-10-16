@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cek Kelayakan Umur SIM</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Cek Kelayakan Umur untuk Ujian SIM</h1>
+    <form id="ageCheckForm">
+      <label for="name">Nama:</label>
+      <input type="text" id="name" name="name" placeholder="Masukkan Nama" required>
+
+      <label for="nim">NIK:</label>
+      <input type="text" id="NIK" name="NIK" placeholder="Masukkan NIK" required>
+
+      <label for="birthdate">Tanggal Lahir:</label>
+      <input type="date" id="birthdate" name="birthdate" required>
+
+      <p>Umur Anda: <span id="age">-</span> tahun</p>
+      <button type="submit">Cek Kelayakan</button>
+    </form>
+    <p id="message"></p>
+  </div>
+  <!-- Existing form -->
+<form id="ageCheckForm">
+  <!-- form fields -->
+</form>
+<!-- Modal pop-up -->
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <p id="popup-message"></p>
+    <button id="okButton" class="ok-button">OK</button>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

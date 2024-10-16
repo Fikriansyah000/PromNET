@@ -1,0 +1,127 @@
+/* Gaya Global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f0f0f;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    perspective: 800px;
+}
+
+.container {
+    background-color: #ec2121;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 800px;
+    max-width: 100%;
+    text-align: center;
+    position: relative;
+    color: white;
+    z-index: 10;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    background-color: #c51414;
+    padding: 10px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.left-section, .right-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.nisn, .nama, .program-studi, .universitas {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.details {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.qr-code img {
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Efek Hujan */
+.rain-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+    animation: moveBackground 10s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% {
+        transform: scale(0.5) translateZ(100px);
+    }
+    100% {
+        transform: scale(1) translateZ(0);
+    }
+}
+
+.rain-drop {
+    position: absolute;
+    width: 5px;
+    height: 20px;
+    background-color: #00aaff; /* Warna tetesan hujan */
+    opacity: 0.5;
+    border-radius: 50%;
+    animation: fall linear infinite;
+}
+
+/* Mengatur hujan agar jatuh */
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    30% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Tambahkan beberapa tetesan hujan dengan waktu jatuh berbeda */
+.rain1 { left: 10%; animation-duration: 1.5s; }
+.rain2 { left: 20%; animation-duration: 2s; }
+.rain3 { left: 30%; animation-duration: 1.7s; }
+.rain4 { left: 40%; animation-duration: 1.6s; }
+.rain5 { left: 50%; animation-duration: 2.1s; }
+.rain6 { left: 60%; animation-duration: 1.8s; }
+.rain7 { left: 70%; animation-duration: 2.3s; }
+.rain8 { left: 80%; animation-duration: 1.9s; }
+.rain9 { left: 90%; animation-duration: 2s; }

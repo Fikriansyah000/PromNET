@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Kelulusan SNBP</title>
+    <link rel="stylesheet" href="style_tidak_lulus.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">SEMANGATT! ANDA DINYATAKAN TIDAK LULUS SELEKSI SNBP 2025</h1>
+
+        <div class="content">
+            <div class="left-section">
+                <p class="nisn">NISN: 0049999310 - NOREG: 423778169</p>
+                <p class="nama">CIPUNK REMIX</p>
+                <p class="program-studi">TEKNIK MESIN S1</p>
+                <p class="universitas">UNIVERSITAS INDONESIA</p>
+                <div class="details">
+                    <p><strong>Tanggal Lahir:</strong> 19/03/2005</p>
+                    <p><strong>Kabupaten/Kota:</strong> Kab. Purwakarta</p>
+                    <p><strong>Asal Sekolah:</strong> SMA WERDI AGUNG</p>
+                    <p><strong>Provinsi:</strong> Prov. Jawa Barat</p>
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="qr-code">
+                    <img src="tidak lulus.png" alt="QR Code">
+                </div>              
+            </div>
+        </div>
+
+        <div class="rain-container">
+            <div class="rain-drop rain1"></div>
+            <div class="rain-drop rain2"></div>
+            <div class="rain-drop rain3"></div>
+            <div class="rain-drop rain4"></div>
+            <div class="rain-drop rain5"></div>
+            <div class="rain-drop rain6"></div>
+            <div class="rain-drop rain7"></div>
+            <div class="rain-drop rain8"></div>
+            <div class="rain-drop rain9"></div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript untuk membuat hujan
+        document.addEventListener("DOMContentLoaded", function () {
+            const rainContainer = document.getElementById('rain');
+            
+            function createRainDrop() {
+                const drop = document.createElement('div');
+                drop.classList.add('drop');
+                drop.style.left = Math.random() * 100 + 'vw';
+                drop.style.animationDuration = Math.random() * 0.5 + 0.5 + 's';
+                rainContainer.appendChild(drop);
+
+                // Menghapus drop setelah selesai animasi
+                setTimeout(() => {
+                    drop.remove();
+                }, 1500);
+            }
+
+            // Membuat hujan terus menerus
+            setInterval(createRainDrop, 50);
+        });
+    </script>
+</body>
+</html>

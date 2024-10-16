@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEK KELULUSAN</title>
+    <link rel="stylesheet" href="style3.css"> <!-- Link ke file CSS -->
+</head>
+<body>
+    <div class="container">
+        <div class="label">
+            <h1>Hitung Nilai Rata-Rata</h1>
+        </div>
+
+        <!-- Input untuk mata pelajaran -->
+        <label for="biologi">Biologi:</label>
+        <input type="number" id="biologi" max="2" required>
+
+        <label for="agama">Agama:</label>
+        <input type="number" id="agama" max="2" required>
+
+        <label for="bIndonesia">Bahasa Indonesia:</label>
+        <input type="number" id="bIndonesia" max="2" required>
+
+        <label for="pkn">PKN:</label>
+        <input type="number" id="pkn" max="2" required>
+
+        <label for="matematikaWajib">Matematika Wajib:</label>
+        <input type="number" id="matematikaWajib" max="2" required>
+
+        <label for="matematikaPeminatan">Matematika Peminatan:</label>
+        <input type="number" id="matematikaPeminatan" max="2" required>
+
+        <label for="tik">TIK:</label>
+        <input type="number" id="tik" max="2" required>
+
+        <label for="bInggris">Bahasa Inggris:</label>
+        <input type="number" id="bInggris" max="2" required>
+
+        <label for="penjas">Penjas:</label>
+        <input type="number" id="penjas" max="2" required>
+
+        <label for="kimia">Kimia:</label>
+        <input type="number" id="kimia" max="2" required>
+
+        <label for="fisika">Fisika:</label>
+        <input type="number" id="fisika" max="2" required>
+
+        <label for="seniBudaya">Seni Budaya:</label>
+        <input type="number" id="seniBudaya" max="2" required>
+
+        <button type="button" onclick="calculateAverage()">Hitung Rata-Rata</button>
+        <div class="footer">Hak Cipta © 2024</div>
+    </div>
+
+    <script src="script3.js">
+    </script> <!-- Link ke file JavaScript -->
+</body>
+</html>

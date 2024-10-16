@@ -1,0 +1,138 @@
+/* Gaya Global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f0f0f;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    perspective: 800px; /* Untuk efek animasi latar belakang */
+}
+
+.container {
+    background-color: #1e3a5f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 800px;
+    max-width: 100%;
+    text-align: center;
+    position: relative;
+    color: white;
+    z-index: 10; /* Supaya berada di atas kembang api */
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    background-color: #00539C;
+    padding: 10px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.left-section, .right-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.nisn, .nama, .program-studi, .universitas .ratarata {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+
+.details {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.qr-code img {
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.registrasi {
+    margin-top: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Kembang Api */
+.fireworks-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+    animation: moveBackground 10s linear infinite;
+}
+
+/* Animasi untuk background bergerak */
+@keyframes moveBackground {
+    0% {
+        transform: scale(0.5) translateZ(100px);
+    }
+    100% {
+        transform: scale(1) translateZ(0);
+    }
+}
+
+.firework {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+/* Kembang api yang lebih meriah */
+.firework1 { background-color: red; animation: explode 1.5s forwards; left: 10%; bottom: 0; }
+.firework2 { background-color: blue; animation: explode 1.7s forwards; left: 25%; bottom: 0; }
+.firework3 { background-color: yellow; animation: explode 1.9s forwards; left: 40%; bottom: 0; }
+.firework4 { background-color: green; animation: explode 1.6s forwards; left: 55%; bottom: 0; }
+.firework5 { background-color: orange; animation: explode 1.8s forwards; left: 70%; bottom: 0; }
+.firework6 { background-color: purple; animation: explode 1.4s forwards; left: 85%; bottom: 0; }
+.firework7 { background-color: cyan; animation: explode 2.0s forwards; left: 30%; bottom: 0; }
+.firework8 { background-color: magenta; animation: explode 1.3s forwards; left: 60%; bottom: 0; }
+
+/* Animasi meledaknya kembang api */
+@keyframes explode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+        bottom: 0;
+    }
+    50% {
+        transform: scale(3);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+        bottom: 80%;
+    }
+}
